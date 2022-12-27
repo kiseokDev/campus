@@ -1,0 +1,13 @@
+export default function QuizResultContainer({data:quizList}){ return
+quizList.map(QuizResultComponent); } function QuizResultComponent (index,quiz){
+const {fileName, filePath,quizText,recordCnt,score,sttText} = quiz; return
+createElement('div',{class:'sentence-item'},
+createElement('div',{class:"number"}, index),
+createElement('div',{class:'sentence'}, quizText,
+createElement('a',{class:'glyphicon
+glyphicon-volume-up',click:()=>{alert('소리띠리링')}})),
+createElement('div',{class:'sentence sentence-result'},
+sttText.map(QuizSubmittedComponent)),
+createElement('div',{class:'infos'},'infos'), ) } function
+QuizSubmittedComponent(singleSttText,index){ return
+createElement('t',{index,class:"correction-delete"},singleSttText) }
